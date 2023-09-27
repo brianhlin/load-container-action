@@ -61,7 +61,7 @@ runs:
     uses: docker/build-push-action@v3.2.0
     with:
       push: False
-      context: .
+      context: ${{ inputs.context }}
       build-args: |
         BASE_YUM_REPO=${{ inputs.repo }}
         BASE_OSG_SERIES=${{ inputs.osg_series }}

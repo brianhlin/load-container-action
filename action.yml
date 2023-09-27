@@ -49,7 +49,7 @@ runs:
       echo "::set-output name=image::$IMAGE_NAME"
 
   - name: Import Docker images from cache
-    uses: actions/cache@v2
+    uses: actions/cache@v3
     with:
       path: /tmp/.buildx-cache
       key: ${{ steps.generate-image-name.outputs.image }}-${{ inputs.osg_series}}-${{ inputs.repo }}-buildx-${{ github.sha }}-${{ github.run_id }}
